@@ -1,0 +1,22 @@
+calculator-devops/
+│
+├── app/
+│   └── index.html                # Calculator application
+│
+├── iac/
+│   ├── main.tf                   # Terraform (IaC)
+│   ├── variables.tf
+│   └── outputs.tf
+│
+├── .github/
+│   ├── workflows/
+│   │   └── deploy.yml             # CI/CD pipeline
+│   │
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.yml
+│   │   └── feature_request.yml
+│   │
+│   └── pull_request_template.md
+│
+├── README.md
+└── .gitignore
