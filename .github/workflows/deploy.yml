@@ -1,0 +1,23 @@
+name: CI-CD pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: checkout repository
+          run: |
+            test -f app/index.html
+
+        - name: deploy to azure static web app
+          uses: azure/static-web-apps-deploy@v1
+          with:
+            azure_static_web_apps_api token: ${{ secrets.AZURE_STATIC_WEB_APP_API_TOKEN }}
+            repo_token: ${{ secrets.GITHUB_TOKEn }}
+            action: upload
+            app_location: "app"
