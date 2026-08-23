@@ -16,10 +16,10 @@ jobs:
     name: Terraform Plan
     runs-on: ubuntu-latest
 
-    env:
-      GITHUB_TOKEN: ${{ secrets.TF_API_TOKEN }}
+  env:
+  TF_TOKEN_app_terraform_io: ${{ secrets.TF_API_TOKEN }} 
 
-    defaults:
+  defaults:
       run:
         working-directory: ./infrastructure
 
