@@ -5,6 +5,14 @@ terraform {
       version = "~> 6.0"
     }
   }
+
+  cloud {
+    organization = "M1llsie-summative"
+
+    workspaces {
+      name = "summative-infrastructure"
+    }
+  }
 }
 
 provider "github" {
